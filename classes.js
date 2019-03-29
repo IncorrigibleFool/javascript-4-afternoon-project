@@ -107,7 +107,7 @@ class ProgressiveManager extends Manager{
   }
 
   hire(employee){
-    this.reports.push(employee)
+    super.hire(employee)
     if(this.reports.length === 0){
       this.title = 'Not a manager'
     }else if(this.reports.length > 0 && this.reports.length < 4){
@@ -124,7 +124,7 @@ class ProgressiveManager extends Manager{
   }
 
   fire(index){
-    this.reports.splice(index, 1)
+    super.fire(index)
     this.bonus += 100
   }
 }
